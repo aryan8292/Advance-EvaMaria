@@ -20,7 +20,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 PORT = environ.get("PORT", "8080")
 
 # Bot settings
-CACHE_TIME = int(environ.get('CACHE_TIME', 300))
+CACHE_TIME = int(environ.get('CACHE_TIME', 3))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/b806ad314d0c415571bde.jpg')).split()
 
@@ -54,7 +54,7 @@ MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
-PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
+PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "True")), True)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), True)
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
