@@ -12,8 +12,8 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
+API_ID = int(environ.get('API_ID', '3334521'))
+API_HASH = environ.get('API_HASH', '29edd7420d528140c7a04bd47486886f')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 #Port
@@ -25,8 +25,8 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 PICS = (environ.get('PICS', 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5mMSYIO_JsvwPUkyMtCJbVhhskhPcwchI-KbveQUh39KBmtoGW-eAlqbFOiY8HF1TawOZsyH17K83009-rmewBuurtiGpmP_3mBN5-qI1KzTKFuINOq0-bF9XQu07hESKtDknIKrcVmxXkBMHjv1VkDucj4PiCIzF6GnKvjcsJNiGteJ2uCxdh-g7yg/s1280/IMG_20230226_020140_812.jpg https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjl1dzk55y2xjP4Hn8WQpKsZZCJtkb6RESSIvkqmsfO8HBKeJy-5ZVHCTHU3xSMNNvEI1ZEbGh18TxSJlHSifRtpmCCUKKm7J_EBpxH6yDo-2NWcIsYgw6Go6zR1os2ujlR6yVRiYcDFMoFjaOG61d3akaBbQQvjQB6ilMZ7TJHRv6-5Bt10VVJz89L9g/s1260/IMG_20230226_020215_064.jpg https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2BgJXzWlu336Kqd6lQhIUWyge4Kf_PQZ_XejlsQE4qZgLCuHWEZENNKVqN8u9gy9oEJYqp4LH9bkLlJzPk9FwFBaPUY2N3-LnPfrD5r9Se-bOWxyE24yr-vhziJESAc90tA5fY2tD8GAHVsR0bTi3Q0ypC498olcrrbLqEpgQOD607f7yTxDznv-Kzw/s1280/IMG_20230226_020232_600.jpg https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiM7UWEMA3ROb-NGEGfd1PrbIdkJvn6bBSUo4sK1h8ObxU-2n5ofwbV52euWglaG68Lhukk83mrf7kV5y-1LLg1re6CiO8mqtPKAa5TIBLobYHU9VLNF5tYc94-fRV-rqAXE6drsrUPcw0wDYC2CoQv2g6EiZ3vn1tzmu8W7QOn8t2Os_qH9RXdfrS5QA/s1280/IMG_20230226_020206_164.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5079629749').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001267201719').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL', '')
@@ -36,11 +36,11 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Aryan829235")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001878110866'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'search_zone_support')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "False")), False) 
@@ -70,7 +70,7 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
 ## EXTRA FEATURES
 
      # Auto Delete For Group Message (Self Delete) #
-SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 1))
+SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 120))
 SELF_DELETE = environ.get('SELF_DELETE', True)
 if SELF_DELETE == "True":
     SELF_DELETE = True
