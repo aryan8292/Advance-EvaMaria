@@ -23,14 +23,9 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
             InlineKeyboardButton('➕ 𝙰𝚍𝚍 𝙼𝚎 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙶𝚛𝚘𝚞𝚙𝚜 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-            InlineKeyboardButton('🧐 𝚂𝚎𝚊𝚛𝚌𝚑', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('💣 clone bot', url='https://t.me/ary_botz/226')
-            ],[
-            InlineKeyboardButton('⚙️ 𝙷𝚎𝚕𝚙', callback_data='help'),
-            InlineKeyboardButton('♋ 𝙰𝚋𝚘𝚞𝚝', callback_data='about')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
+            ]
+            InlineKeyboardButton('🧐 𝚂𝚎𝚊𝚛𝚌𝚑', switch_inline_query_current_chat='')
+                  ]
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
         await asyncio.sleep(2) # 😢 https://github.com/GreyMattersbot/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
         if not await db.get_chat(message.chat.id):
